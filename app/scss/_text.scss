@@ -1,0 +1,16 @@
+.text {
+  padding-bottom: 45px;
+  color: #000;
+  font: 12px/2 "GothamRounded-Book", "Helvetica", sans-serif;
+  letter-spacing: 1.8px;
+
+  &__another {
+    font-family: "GothamRounded-Bold", "Helvetica", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .text {
+    color: #373737
+  }
+}

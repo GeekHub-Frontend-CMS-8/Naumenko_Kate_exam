@@ -1,0 +1,307 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+input, textarea, label {
+  outline: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "GothamRounded-Bold";
+  src: url("../fonts/GothamRounded-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GothamRounded-Book";
+  src: url("../fonts/Gotham Rounded Book.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GothamRounded-Medium";
+  src: url("../fonts/GothamRounded-Medium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+.row {
+  max-width: 1025px;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__row {
+    max-width: 760px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.home {
+  height: 120vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/Livello_1.png");
+  background-size: cover; }
+  .home__desktop-logo {
+    display: none; }
+  .home__mobile-logo {
+    display: block; }
+  .home__title {
+    color: #fff;
+    font: 36px "GothamRounded-Bold", "Helvetica", sans-serif;
+    letter-spacing: 5.4px;
+    text-align: center;
+    text-transform: uppercase; }
+  .home__under-title {
+    padding: 15px 0 25px;
+    color: #fff;
+    font: 16px "GothamRounded-Medium", "Helvetica", sans-serif;
+    letter-spacing: 2.4px;
+    text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  .home {
+    height: 90vh; }
+    .home__desktop-logo {
+      display: block; }
+    .home__mobile-logo {
+      display: none; } }
+
+.navigation__main-menu,
+.navigation > input {
+  display: none; }
+
+.navigation > label {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.navigation > input:checked + .navigation__main-menu {
+  display: block; }
+
+.navigation {
+  display: block;
+  position: relative; }
+  .navigation__menu-item {
+    padding: 15px 10px;
+    display: block;
+    font: 16px "GothamRounded-Bold", "Helvetica", sans-serif;
+    text-transform: uppercase; }
+  .navigation__icon {
+    font-size: 20px; }
+
+@media only screen and (min-device-width: 768px) {
+  .navigation {
+    height: auto;
+    width: 100%; }
+    .navigation__main-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .navigation__menu-item {
+      display: inline-block;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; }
+  .navigation > label {
+    display: none; } }
+
+@media only screen and (max-device-width: 767px) {
+  .navigation > input:checked + .navigation__main-menu {
+    position: absolute;
+    right: -20px;
+    top: 30px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    z-index: 999;
+    text-align: center; }
+  .navigation > input:checked + .navigation__about-main-menu {
+    background-color: #91778e; }
+  .navigation > input:checked + .navigation__contact-main-menu {
+    background-color: #82c8bd; }
+  .navigation > input:checked + .navigation__home-main-menu {
+    background-color: #74c7d5; }
+  .navigation > input:checked + .navigation__services-main-menu {
+    background-color: #df5c64; }
+  .navigation > input:checked + .navigation__work-main-menu {
+    background-color: #a1ca6c; }
+  .navigation > input:checked + .navigation__portfolio-main-menu {
+    background-color: #f5c149; } }
+
+.link {
+  color: #fff;
+  text-decoration: none; }
+
+.button-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.button {
+  padding: 20px 30px;
+  background-color: #16a085;
+  border: 1px solid #16a085;
+  border-radius: 3px;
+  color: #fff;
+  font: 12px "GothamRounded-Bold", "Helvetica", sans-serif;
+  letter-spacing: 1.8px;
+  text-transform: uppercase; }
+  .button--hovered:hover {
+    background-color: #fff;
+    color: #16a085; }
+
+.social-icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.social-icon {
+  padding: 0 10px;
+  font-size: 25px; }
+
+.second {
+  padding-top: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f5f6f7; }
+  .second__button-container {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-bottom: 110px; }
+  .second__button {
+    padding-left: 45px;
+    padding-right: 45px; }
+
+.intro {
+  width: 100%;
+  background: url(../img/hand.jpg) no-repeat right bottom;
+  white-space: pre-line; }
+
+.title {
+  padding-bottom: 50px;
+  color: #16a085;
+  font: 18px "GothamRounded-Bold", "Helvetica", sans-serif;
+  letter-spacing: 2.7px;
+  text-transform: uppercase; }
+
+.text {
+  padding-bottom: 45px;
+  color: #000;
+  font: 12px/2 "GothamRounded-Book", "Helvetica", sans-serif;
+  letter-spacing: 1.8px; }
+  .text__another {
+    font-family: "GothamRounded-Bold", "Helvetica", sans-serif; }
+
+@media only screen and (min-width: 768px) {
+  .text {
+    color: #373737; } }
+
+.third {
+  padding-top: 145px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right; }
+  .third__intro {
+    background: url("../img/phone.png") no-repeat; }
+  .third__button-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }

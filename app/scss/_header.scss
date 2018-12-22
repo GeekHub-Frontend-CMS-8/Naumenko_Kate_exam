@@ -1,0 +1,16 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  &__row {
+    max-width: 760px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

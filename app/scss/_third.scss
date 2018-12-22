@@ -1,0 +1,14 @@
+.third {
+  padding-top: 145px;
+  justify-content: center;
+  display: flex;
+  text-align: right;
+
+  &__intro {
+    background: url("../img/phone.png") no-repeat;
+  }
+
+  &__button-container {
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,46 @@
+.home {
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/Livello_1.png");
+  background-size: cover;
+
+  &__desktop-logo {
+    display: none;
+  }
+
+  &__mobile-logo {
+    display: block;
+  }
+
+  &__title {
+    color: #fff;
+    font: 36px "GothamRounded-Bold", "Helvetica", sans-serif;
+    letter-spacing: 5.4px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__under-title {
+    padding: 15px 0 25px;
+    color: #fff;
+    font: 16px "GothamRounded-Medium", "Helvetica", sans-serif;
+    letter-spacing: 2.4px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    height: 90vh;
+
+    &__desktop-logo {
+    display: block;
+    }
+
+    &__mobile-logo {
+      display: none;
+    }
+  }
+}
